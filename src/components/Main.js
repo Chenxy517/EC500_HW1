@@ -1,10 +1,12 @@
-import {Col, Row} from "antd";
-
 import InputBox from "./InputBox";
+import ReturnBox from "./ReturnBox"
 
 function Main() {
     return (
-        <InputBox className="input-box"></InputBox>
+        <div className="main">
+            <InputBox className="input-box"></InputBox>
+            <ReturnBox></ReturnBox>
+        </div>
     )
 }
 

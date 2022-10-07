@@ -27,33 +27,37 @@ const tailFormItemLayout = {
     },
 };
 
-function InputBox(props) {
+function InputBox() {
     const [form] = Form.useForm();
 
     const onFinish = values => {
         console.log('Received values of form: ', values);
-        const { password, command } = values;
+        const { salt, hash, command } = values;
         const opt = {
-            method: 'POST',
-            url: `${REDIS_URL}`,
+            method: 'GET',
+            url: REDIS_URL + '?salt=' + salt + '&hash=' + hash + '&message=' + command,
+            // url: 'https://agile.bu.edu/ec500_scripts/redis.php?salt=asd&hash=568b86f23da7373cd8993aa89c310273&message=SET server:name1 kevin',
             data: {
-                hashcode: password,
-                command: command
+                salt: salt,
+                hash: hash,
+                message: command
             },
             headers: { 'content-type': 'application/json'}
         };
 
         axios(opt)
             .then( response => {
-                console.log(response)
+                console.log(opt)
+                console.log(response.data)
                 if(response.status === 200) {
                     message.success('Message Send Succeed');
                 }
             })
             .catch( error => {
                 console.log('message send failed: ', error.message);
-                message.success('Message Send Error');
+                message.error('Message Send Failed');
             })
+
     };
 
     return (
@@ -62,15 +66,15 @@ function InputBox(props) {
             form={form}
             name="InputBox"
             onFinish={onFinish}
-            className="InputBox"
+            className="inputbox"
         >
             <Form.Item
                 name="salt"
-                label="Salt"
+                label="salt"
                 rules={[
                     {
                         required: true,
-                        message: 'Please input your Salt',
+                        message: 'Please input your salt',
                     },
                 ]}
             >
@@ -78,8 +82,8 @@ function InputBox(props) {
             </Form.Item>
 
             <Form.Item
-                name="password"
-                label="Password"
+                name="hash"
+                label="password"
                 rules={[
                     {
                         required: true,
@@ -92,11 +96,11 @@ function InputBox(props) {
 
             <Form.Item
                 name="command"
-                label="Command"
+                label="command"
                 rules={[
                     {
                         required: true,
-                        message: 'Please input your command',
+                        message: 'Please input your message',
                     },
                 ]}
             >
