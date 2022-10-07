@@ -1,5 +1,6 @@
-import returnmessage from "./InputBox";
+import InputBox from "./InputBox";
 function ReturnBox() {
+
     return (
         <div className="returnbox">
             <script ></script>

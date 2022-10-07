@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Button, message } from 'antd';
 import axios from 'axios';
 
+import md5 from "./md5"
 import { REDIS_URL } from "../constants";
 
 const formItemLayout = {
@@ -32,19 +33,15 @@ function InputBox() {
 
     const onFinish = values => {
         console.log('Received values of form: ', values);
-        const { salt, hash, command } = values;
+        const { salt, password, command } = values;
+        const hash = md5(salt + password);
         const opt = {
             method: 'GET',
             url: REDIS_URL + '?salt=' + salt + '&hash=' + hash + '&message=' + command,
-            // url: 'https://agile.bu.edu/ec500_scripts/redis.php?salt=asd&hash=568b86f23da7373cd8993aa89c310273&message=SET server:name1 kevin',
-            data: {
-                salt: salt,
-                hash: hash,
-                message: command
-            },
             headers: { 'content-type': 'application/json'}
         };
-
+        var responsemessage = axios(opt);
+        console.log(responsemessage, 'show in InputBox')
         axios(opt)
             .then( response => {
                 console.log(opt)
@@ -52,6 +49,7 @@ function InputBox() {
                 if(response.status === 200) {
                     message.success('Message Send Succeed');
                 }
+                return response.data
             })
             .catch( error => {
                 console.log('message send failed: ', error.message);
@@ -82,7 +80,7 @@ function InputBox() {
             </Form.Item>
 
             <Form.Item
-                name="hash"
+                name="password"
                 label="password"
                 rules={[
                     {
