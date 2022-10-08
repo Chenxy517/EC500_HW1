@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Input, Button, message } from 'antd';
 import axios from 'axios';
+import PubSub from "pubsub-js"
 
 import md5 from "./md5"
 import { REDIS_URL } from "../constants";
@@ -40,12 +41,11 @@ function InputBox() {
             url: REDIS_URL + '?salt=' + salt + '&hash=' + hash + '&message=' + command,
             headers: { 'content-type': 'application/json'}
         };
-        var responsemessage = axios(opt);
-        console.log(responsemessage, 'show in InputBox')
         axios(opt)
             .then( response => {
-                console.log(opt)
+                console.log('Request sent to Redis: ', opt)
                 console.log(response.data)
+                PubSub.publish('response_data',response.data)
                 if(response.status === 200) {
                     message.success('Message Send Succeed');
                 }
@@ -64,11 +64,11 @@ function InputBox() {
             form={form}
             name="InputBox"
             onFinish={onFinish}
-            className="inputbox"
+            className="input-box"
         >
             <Form.Item
                 name="salt"
-                label="salt"
+                label="Salt"
                 rules={[
                     {
                         required: true,
@@ -81,7 +81,7 @@ function InputBox() {
 
             <Form.Item
                 name="password"
-                label="password"
+                label="Password"
                 rules={[
                     {
                         required: true,
@@ -94,7 +94,7 @@ function InputBox() {
 
             <Form.Item
                 name="command"
-                label="command"
+                label="Message"
                 rules={[
                     {
                         required: true,

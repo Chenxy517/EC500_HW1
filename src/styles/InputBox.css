@@ -1,6 +1,7 @@
-.inputbox {
+.input-box {
     width: 500px;
-    margin: 0 auto;
+    margin: auto;
+    padding-right: 150px;
 }
 
 .send-btn {
