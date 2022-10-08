@@ -2,8 +2,8 @@ import React from "react";
 import { Form, Input, Button, message } from 'antd';
 import axios from 'axios';
 import PubSub from "pubsub-js"
-
-import md5 from "./md5"
+// import md5 from "./md5"
+import MD5 from "./md5_lib"
 import { REDIS_URL } from "../constants";
 
 const formItemLayout = {
@@ -35,7 +35,8 @@ function InputBox() {
     const onFinish = values => {
         console.log('Received values of form: ', values);
         const { salt, password, command } = values;
-        const hash = md5(salt + password);
+        var md5 = new MD5(salt + password);
+        const hash = md5.md5;
         const opt = {
             method: 'GET',
             url: REDIS_URL + '?salt=' + salt + '&hash=' + hash + '&message=' + command,
@@ -47,13 +48,19 @@ function InputBox() {
                 console.log(response.data)
                 PubSub.publish('response_data',response.data)
                 if(response.status === 200) {
-                    message.success('Message Send Succeed');
+                    if (!response.data || response.data.length === 0) {
+                        message.error('Password incorrect, Please try again.');
+                    }
+                    else{
+                        message.success('Message Send Succeed');
+                    }
+                    
                 }
                 return response.data
             })
             .catch( error => {
-                console.log('message send failed: ', error.message);
-                message.error('Message Send Failed');
+                console.log('Network error, message send failed: ', error.message);
+                message.error('Message Send Failed: ' + error.message);
             })
 
     };

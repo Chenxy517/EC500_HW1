@@ -19,7 +19,7 @@ class ReturnBox extends Component {
         let {message} = this.state
         return (
             <div className="return-box">
-                Redis Return>>
+                Redis Return Message: 
                 <div className="return-message">
                     {message}
                 </div>
