@@ -3,7 +3,7 @@ import { Form, Input, Button, message } from 'antd';
 import axios from 'axios';
 import PubSub from "pubsub-js"
 // import md5 from "./md5"
-import MD5 from "./md5_lib"
+import MD5 from "./Md5_lib"
 import { REDIS_URL } from "../constants";
 
 const formItemLayout = {
@@ -49,7 +49,7 @@ function InputBox() {
                 PubSub.publish('response_data',response.data)
                 if(response.status === 200) {
                     if (!response.data || response.data.length === 0) {
-                        message.error('Password incorrect, Please try again.');
+                        message.error('Password Incorrect, Please Try Again');
                     }
                     else{
                         message.success('Message Send Succeed');
@@ -82,8 +82,9 @@ function InputBox() {
                         message: 'Please input your salt',
                     },
                 ]}
+                
             >
-                <Input />
+                <Input placeholder="Any Sequences of Characters" />
             </Form.Item>
 
             <Form.Item
@@ -96,7 +97,7 @@ function InputBox() {
                     },
                 ]}
             >
-                <Input.Password />
+                <Input.Password placeholder="Your Password" />
             </Form.Item>
 
             <Form.Item
@@ -109,7 +110,7 @@ function InputBox() {
                     },
                 ]}
             >
-                <Input />
+                <Input placeholder="Example: GET server:name" />
             </Form.Item>
 
             <Form.Item {...tailFormItemLayout}>
