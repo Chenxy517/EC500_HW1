@@ -63,9 +63,8 @@ After you finish the initial Build-Up of the project, you could run the project 
 
 > Runs the app in the development mode.
 
-**Note**: This will open [http://localhost:3000](http://localhost:3000) to view the our designed Integrated Interface in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
+**Note**: This will open [http://localhost:3000](http://localhost:3000) to view the our designed Integrated Interface in your browser. The page will reload when you make changes. You may also see any lint errors in the console. \
 
----
 
 There are several commands that might be helpful to test the the APP interface. But you might not necessary to run them all in the by testing the applicable of this project: 
 
