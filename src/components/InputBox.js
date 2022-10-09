@@ -97,7 +97,7 @@ function InputBox() {
                     },
                 ]}
             >
-                <Input.Password placeholder="Your Password" />
+                <Input.Password placeholder="Default: A8D6E93C2D204" />
             </Form.Item>
 
             <Form.Item
