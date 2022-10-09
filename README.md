@@ -12,27 +12,30 @@ Before you running with the code and build the project, there are several steps 
 
 Check the following section `#Environment SetUp` to learn about what needed to be installed.
 
-- The webpage includes three major Input block,
+The webpage includes three major Input block,
 
 1. A `salt` , which is a sequence of characters.
 2. A `hash` , which should contain the `md5` hash of (Your salt concatenated with an appropriate password, default has been included in the placeholder of the block).
 3. A `message` , which is the command that you'd like to send to the server.
 
-## Environment SetUp
+## Environment Set-up
 
-#### **Node.js:**  `npm`
-`Node.js` is an open-source, cross-platform JavaScript runtime environment, since all the design of our code are basically build on by `Node.js` platform. You will need it to be Set-Up ready on your local devices at the first.
+### **Node.js:**  `npm`
+> `Node.js` is an open-source, cross-platform JavaScript runtime environment, since all the design of our code are basically build on by `Node.js` platform. You will need it to be Set-Up ready on your local devices at the first.
 
-OR you could [Download the Node.js](https://nodejs.org/en/) by this link.
+> OR you could [Download the Node.js](https://nodejs.org/en/) by this link.
 
-#### **React:**  `npm i react`
-As we explained above, `React` is a JavaScript library for creating user interfaces and will be necessary for this project.
+### **React:**  
+- Terminal command: `npm i react`
+> As we explained above, `React` is a JavaScript library for creating user interfaces and will be necessary for this project.
 
-#### **Axios:**  `npm install axios`
-`Axios` is a promise-based HTTP Client for `node.js` and the browser. It is isomorphic (= it can run in the browser and `nodejs` with the same codebase). On the server-side it uses the native `node.js` http module, while on the client (browser) it uses XMLHttpRequests.
+### **Axios:**  
+- Terminal command: `npm install axios`
+> `Axios` is a promise-based HTTP Client for `node.js` and the browser. It is isomorphic (= it can run in the browser and `nodejs` with the same codebase). On the server-side it uses the native `node.js` http module, while on the client (browser) it uses XMLHttpRequests.
 
-#### **MD5 hash function:**  `npm install md5`
-A JavaScript function for hashing messages with MD5.
+### **MD5 hash function:**  
+- Terminal command: `npm install md5`
+> A JavaScript function for hashing messages with MD5.
 
 ## Run and build the project
 
