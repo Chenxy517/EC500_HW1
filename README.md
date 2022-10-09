@@ -4,9 +4,13 @@
 
 Note: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). \
 
-In this project, we designed a web interface that integrated by React component. (For more information about React, check the section of `#Learn More`), React is a JavaScript library for building user interfaces, we use the architecture to build the primer User-Interface that could interact with Redis server by using only pure HTML, CSS, JavaScript language.
+In this project, we designed a web interface that integrated by React component. (For more information about React, check the section of `#Learn More`).
 
-As in mention, we also applied an MD5 hash function by using the JavaScript library which could be sourced from: [npm MD5](https://www.npmjs.com/package/md5). Before you running with the code and build the project, there are several steps of environment Set-up that need to be pre-installed.
+React is a JavaScript library for building user interfaces, we use the architecture to build the primer User-Interface that could interact with Redis server by using only pure HTML, CSS, JavaScript language.
+
+As in mention, we also applied an MD5 hash function by using the JavaScript library which could be sourced from: [npm MD5](https://www.npmjs.com/package/md5). 
+
+Before you running with the code and build the project, there are several steps of environment Set-up that need to be pre-installed.
 
 Check the following section `#Environment SetUp` to learn about what needed to be installed.
 
@@ -34,9 +38,11 @@ A JavaScript function for hashing messages with MD5.
 
 ## Run and build the project
 
-If you follow all the steps and successfully installed the packages from the above explain, \
-Configuration, you are almost there! \
-And NOW you will be able to build the project in your local environment. \
+If you follow all the steps and successfully installed the packages from the above explain,
+
+Configuration, you are almost there! 
+
+And NOW you will be able to build the project in your local environment. 
 
 Since the interface is basically designed by `JavaScript`, the Package Manager `npm` is required to build all the environment variables, `npm` is a package manager for the `JavaScript` programming language, which is the default package manager for the JavaScript runtime environment `Node.js`.
 
