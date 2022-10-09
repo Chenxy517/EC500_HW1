@@ -8,8 +8,7 @@
 
 - As in mention, we also applied an MD5 hash function by using the JavaScript library which could be sourced from: [npm MD5](https://www.npmjs.com/package/md5). 
 
-- Before you running with the code and build the project, there are several steps needed of environment Set-up.
-- Check the following section `#Environment SetUp` to learn about what needed to be installed.
+- Before you running with the code and build the project, there are several steps needed of environment Set-up. Check the following section `#Environment SetUp` to learn about what needed to be installed.
 
 The webpage includes three major Input block,
 
@@ -21,7 +20,8 @@ The webpage includes three major Input block,
 
 ## Environment Set-up
 
-### **Node.js:**  `npm`
+### **Node.js:**  
+- #### `npm`
 > `Node.js` is an open-source, cross-platform JavaScript runtime environment, since all the design of our code are basically build on by `Node.js` platform. You will need it to be Set-Up ready on your local devices at the first.
 
 > OR you could [Download the Node.js](https://nodejs.org/en/) by this link.
