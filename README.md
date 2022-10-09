@@ -1,5 +1,4 @@
 # EC501_HW1 Redis adapter
-\
 
 ## Introduction:
 
@@ -18,8 +17,8 @@ The webpage includes three major Input block,
 1. A `salt` , which is a sequence of characters.
 2. A `hash` , which should contain the `md5` hash of (Your salt concatenated with an appropriate password, default has been included in the placeholder of the block).
 3. A `message` , which is the command that you'd like to send to the server.
-\
-\
+
+
 
 ## Environment Set-up
 
@@ -39,8 +38,8 @@ The webpage includes three major Input block,
 ### **MD5 hash function:**  
 - #### Terminal command: `npm install md5`
 > A JavaScript function for hashing messages with MD5. 
-\
-\
+
+
 
 ## Run and build the project
 
@@ -67,12 +66,12 @@ After you finish the initial Build-Up of the project, you could run the project 
 
 **Note**: This will open [http://localhost:3000](http://localhost:3000) to view the our designed Integrated Interface in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
 
-There are several commands that might be helpful to test the the APP interface. But you might not necessary to run them all in the by testing the applicable of this project.
+
+There are several commands that might be helpful to test the the APP interface. But you might not necessary to run them all in the by testing the applicable of this project: 
 
 #### `npm test`
 
 > Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 
 #### `npm run eject`
 
