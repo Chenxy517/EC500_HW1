@@ -1,4 +1,5 @@
 # EC501_HW1 Redis adapter
+\
 
 ## Introduction:
 
@@ -17,6 +18,8 @@ The webpage includes three major Input block,
 1. A `salt` , which is a sequence of characters.
 2. A `hash` , which should contain the `md5` hash of (Your salt concatenated with an appropriate password, default has been included in the placeholder of the block).
 3. A `message` , which is the command that you'd like to send to the server.
+\
+\
 
 ## Environment Set-up
 
@@ -26,16 +29,18 @@ The webpage includes three major Input block,
 > OR you could [Download the Node.js](https://nodejs.org/en/) by this link.
 
 ### **React:**  
-- Terminal command: `npm i react`
+- #### Terminal command: `npm i react`
 > As we explained above, `React` is a JavaScript library for creating user interfaces and will be necessary for this project.
 
 ### **Axios:**  
-- Terminal command: `npm install axios`
+- #### Terminal command: `npm install axios`
 > `Axios` is a promise-based HTTP Client for `node.js` and the browser. It is isomorphic (= it can run in the browser and `nodejs` with the same codebase). On the server-side it uses the native `node.js` http module, while on the client (browser) it uses XMLHttpRequests.
 
 ### **MD5 hash function:**  
-- Terminal command: `npm install md5`
-> A JavaScript function for hashing messages with MD5.
+- #### Terminal command: `npm install md5`
+> A JavaScript function for hashing messages with MD5. 
+\
+\
 
 ## Run and build the project
 
@@ -62,9 +67,7 @@ After you finish the initial Build-Up of the project, you could run the project 
 
 **Note**: This will open [http://localhost:3000](http://localhost:3000) to view the our designed Integrated Interface in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
 
-
-There are several commands that might be helpful to test the the APP interface. But you might don't necessary need to run them in the temporary version.
-
+There are several commands that might be helpful to test the the APP interface. But you might not necessary to run them all in the by testing the applicable of this project.
 
 #### `npm test`
 
@@ -83,8 +86,8 @@ There are several commands that might be helpful to test the the APP interface. 
 
 ## Learn More
 
-  - You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-  - To learn React, check out the [React documentation](https://reactjs.org/).
+- You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
