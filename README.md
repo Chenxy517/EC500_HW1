@@ -16,7 +16,7 @@ The webpage includes three major Input block,
 2. A `hash` , which should contain the `md5` hash of (Your salt concatenated with an appropriate password, default has been included in the placeholder of the block).
 3. A `message` , which is the command that you'd like to send to the server.
 
-
+--- 
 
 ## Environment Set-up
 
@@ -38,7 +38,7 @@ The webpage includes three major Input block,
 - #### Terminal command: `npm install md5`
 > A JavaScript function for hashing messages with MD5. 
 
-
+---
 
 ## Run and build the project
 
@@ -65,6 +65,7 @@ After you finish the initial Build-Up of the project, you could run the project 
 
 **Note**: This will open [http://localhost:3000](http://localhost:3000) to view the our designed Integrated Interface in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
 
+---
 
 There are several commands that might be helpful to test the the APP interface. But you might not necessary to run them all in the by testing the applicable of this project: 
 
@@ -81,6 +82,8 @@ There are several commands that might be helpful to test the the APP interface. 
 > Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 > You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+---
 
 ## Learn More
 
