@@ -8,8 +8,7 @@
 
 - As in mention, we also applied an MD5 hash function by using the JavaScript library which could be sourced from: [npm MD5](https://www.npmjs.com/package/md5). 
 
-- Before you running with the code and build the project, there are several steps of environment Set-up that need to be pre-installed.
-
+- Before you running with the code and build the project, there are several steps needed of environment Set-up.
 - Check the following section `#Environment SetUp` to learn about what needed to be installed.
 
 The webpage includes three major Input block,
